@@ -1,0 +1,192 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+<Layout>
+<div id ="main">
+    <h1 id="head">Our <span class="gradient">Projects</span></h1>
+    <p id="para">Innovating at the intersection of bits and botany.</p>
+    <div id="project">
+        <div class="container">
+            <div id="img"></div>
+            <h3>(; Project Clover</h3>
+            <p>Project Clover is our flagship initiative, focused on developing a cutting-edge electric vehicle that combines sustainability with high performance.</p> 
+            <div id = contributors>
+                <h4>Contributors:</h4>
+                <p>Roy, Melroy</p>
+                <span class = "tech-stack">React js</span>
+                <span class = "tech-stack">Node js</span>
+                <span class = "tech-stack">MongoDB</span>
+            </div>
+        </div>
+        <div class="container">
+            <div id="img"></div>
+            <h3>(; Project Clover</h3>
+            <p>Project Clover is our flagship initiative, focused on developing a cutting-edge electric vehicle that combines sustainability with high performance.</p> 
+            <div id = contributors>
+                <h4>Contributors:</h4>
+                <p>Roy, Melroy</p>
+                <span class = "tech-stack">React js</span>
+                <span class = "tech-stack">Node js</span>
+                <span class = "tech-stack">MongoDB</span>
+            </div>
+        </div>
+        <div class="container">
+            <div id="img"></div>
+            <h3>(; Project Clover</h3>
+            <p>Project Clover is our flagship initiative, focused on developing a cutting-edge electric vehicle that combines sustainability with high performance.</p> 
+            <div id = contributors>
+                <h4>Contributors:</h4>
+                <p>Roy, Melroy</p>
+                <span class = "tech-stack">React js</span>
+                <span class = "tech-stack">Node js</span>
+                <span class = "tech-stack">MongoDB</span>
+            </div>
+        </div>
+        <div class="container">
+            <div id="img"></div>
+            <h3>(; Project Clover</h3>
+            <p>Project Clover is our flagship initiative, focused on developing a cutting-edge electric vehicle that combines sustainability with high performance.</p> 
+            <div id = contributors>
+                <h4>Contributors:</h4>
+                <p>Roy, Melroy</p>
+                <span class = "tech-stack">React js</span>
+                <span class = "tech-stack">Node js</span>
+                <span class = "tech-stack">MongoDB</span>
+            </div>
+        </div>
+        <div class="container">
+            <div id="img"></div>
+            <h3>(; Project Clover</h3>
+            <p>Project Clover is our flagship initiative, focused on developing a cutting-edge electric vehicle that combines sustainability with high performance.</p> 
+            <div id = contributors>
+                <h4>Contributors:</h4>
+                <p>Roy, Melroy</p>
+                <span class = "tech-stack">React js</span>
+                <span class = "tech-stack">Node js</span>
+                <span class = "tech-stack">MongoDB</span>
+            </div>
+        </div>
+        <div class="container">
+            <div id="img"></div>
+            <h3>(; Project Clover</h3>
+            <p>Project Clover is our flagship initiative, focused on developing a cutting-edge electric vehicle that combines sustainability with high performance.</p> 
+            <div id = contributors>
+                <h4>Contributors:</h4>
+                <p>Roy, Melroy</p>
+                <span class = "tech-stack">React js</span>
+                <span class = "tech-stack">Node js</span>
+                <span class = "tech-stack">MongoDB</span>
+            </div>
+        </div>
+    </div>
+</div>
+</Layout>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#main{
+    min-height: 100vh;
+    height: auto;
+    background-color:#0a0f0a ;
+}
+.container{
+        background-color: #ffffff08;
+        border: 1px solid #ffffff1a;
+        text-align: center;
+        border-radius: 20px;
+        margin: 20px;
+        padding: 40px;
+        border-radius: 20px;
+        justify-items: start;
+}
+#project{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-left: 130px;
+    margin-right: 130px;
+}
+#img{
+    background-color: #ffffff1a;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    width: 97%;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("/logo1.jpeg");
+    background-size:250px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+h3{
+    color: #e0f2f1;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+p{
+    color: #a0ac9f;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+}
+#contributors{
+    border-top: 1px solid #ffffff1a;
+    width: 100%;
+    justify-items: start;
+    }
+#contributors h4{
+        color: #a0ac9f;
+        font-size: 11px;
+        margin-bottom: 10px;
+        text-align: left;
+        padding-left: 20px;
+        margin-top: 10px;
+    }
+#contributors p{
+        color: #e0f2f1;
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-align: left;
+        padding-left: 20px;
+    }
+    .tech-stack{
+        display: inline-block;
+        background-color: #34e9bd;
+        color: #0a0f0a;
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-size: 12px;
+    }
+    #head{
+        font-size: 48px;
+        color: #e0f2f1;
+        text-align: center;
+        padding-top: 130px;
+    }
+    .gradient{
+        background: linear-gradient(135deg, #4a7c44 0%, #34e9bd 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    #para{
+        color: #a0ac9f;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 10px;
+        padding-bottom: 100px;
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+</style>

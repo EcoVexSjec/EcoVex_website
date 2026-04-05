@@ -1,0 +1,139 @@
+---
+    import Layout from "../layouts/Layout.astro"
+---
+<Layout>
+<div id="main">
+    <div id="Nav">
+    <ul id="desk">
+        <li ><a href="/"><span id="logo"/></a></li>
+        <li class="hideonmobile"><a href="/">Home</a></li>
+        <li class="hideonmobile"><a href="/team">Team</a></li>
+        <li class="hideonmobile"><a href="/event">Events</a></li>
+        <li class="hideonmobile"><a href="/projects">Projects</a></li>
+        <li class ="hidemenu" onclick="const sidebar = document.querySelector('.sidebar'); sidebar.style.display = 'flex'"><a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="30px" fill="#a0ac9f"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32- third-party libraries 32l384 0c17.7 0 32 14.3 32 32z"/></svg></a></li>
+    </ul>
+    <ul class="sidebar">
+        <li><a  onclick="document.querySelector('.sidebar').style.display = 'none'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" height="25px" fill="#a0ac9f"><path d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/></svg></a></li>   
+        <li><a href="/">Home</a></li>
+        <li><a href="/team">Team</a></li>
+        <li><a href="/event">Events</a></li>
+        <li><a href="/projects">Projects</a></li>
+    </ul>
+</div>
+</div>
+</Layout>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #main{
+       z-index: 999;
+       position: fixed;
+        left:50%; 
+    }
+    #Nav #desk{
+         backdrop-filter: blur(20px);
+        width: 150%;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:1px solid #ffffff1a;
+        margin-top:30px ;
+        border-radius: 10px;
+        transform: translateX(-50%);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #Nav #desk li{
+        height: 50px;
+        margin-left: 10px;
+
+    }
+    #Nav #desk a{
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        color: #a0ac9f;
+    }
+    #Nav #desk a:hover{
+        color: #34e9bd;
+    }
+    #logo
+    {
+        height: 40px;
+        width: 50px;
+        background-image: url("/logo1.jpeg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #Nav #desk li:first-child{
+        margin-right: auto;
+    }
+    #Nav #desk a:active{
+    text-decoration: underline solid #34e9bd;
+    }
+    .sidebar{
+        list-style: none;
+        position: fixed;
+        top: 0;
+        right:0;
+        height: 50vh;
+        width: 50vw;
+        z-index: 999;
+        /* background-color: rgb(255, 255, 255, 0.3);*/
+        backdrop-filter: blur(20px); 
+        display: none;
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-start;
+    }
+
+    .sidebar li{
+        width: 100%;
+        height: 50px;
+    }
+    .sidebar a{
+        width: 100%;
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        color: #a0ac9f;
+        padding-top: 40px;
+    }
+    .sidebar li:first-child{
+        
+    }
+    .sidebar a:active{
+    text-decoration: underline solid #34e9bd;
+    }
+    .sidebar a:hover{
+        color: #34e9bd;
+    }
+    .hidemenu{
+        display: none;
+    }
+    @media (max-width:950px) {
+        .hideonmobile{
+            display: none;
+        }
+        .hidemenu{
+        display: block;
+        }
+    }
+    @media (max-width:450px) {
+        .sidebar{
+            width:100%;
+        }
+    }
+</style>
