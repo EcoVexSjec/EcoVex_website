@@ -23,6 +23,19 @@
 </div>
 </Layout>
 
+<script>
+  const currentPath = window.location.pathname;
+  
+  document.querySelectorAll('#Nav a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && href !== '/EcoVex_Sjec/' && currentPath.includes(href.replace('/EcoVex_Sjec', ''))) {
+      link.classList.add('active');
+    } else if (href === '/EcoVex_Sjec/' && (currentPath === '/EcoVex_Sjec/' || currentPath === '/EcoVex_Sjec')) {
+      link.classList.add('active');
+    }
+  });
+</script>
+
 <style>
     * {
         margin: 0;
@@ -109,10 +122,16 @@
         display: flex;
         align-items: center;
         color: #a0ac9f;
-        padding-top: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
-    .sidebar li:first-child{
-        
+    #Nav #desk a.active {
+        color: #34e9bd;
+        text-decoration: underline solid #34e9bd;
+    }
+
+    .sidebar a.active {
+        color: #34e9bd;
     }
     .sidebar a:active{
     text-decoration: underline solid #34e9bd;

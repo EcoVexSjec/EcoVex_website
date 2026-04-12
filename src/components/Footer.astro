@@ -1,195 +1,128 @@
-<!-- <div id="footer">
-    <div class="footer-brand">
-        <img src="/src/assets/logo.png" alt="Eco Club Logo" id="logo">
-        <h2>ECO CLUB</h2>
-        <p>Integrating nature's wisdom with human innovation.<br>Join us in building a sustainable future.</p>
-    </div>
-
-    <div class="footer-nav">
-        <span class="menu-title">Menu</span>
-        <a href="#">Home</a>
-        <a href="#">Team</a>
-        <a href="#">Projects</a>
-        <a href="#">Events</a>
-    </div>
-
-    <div id="bottom">
-        © 2026 SJEC ECO CLUB.
-    </div>
-</div>
-
-<style>
-    #footer {
-        background-color: #0a0f0a;
-        min-height: 40vh;
-        max-width: 100vW;
-        padding: 50px 10%;
-        display: flex;
-        justify-content: space-between; 
-        box-sizing: border-box;
-        position: relative;
-        left: 0;
-        bottom: 0;people with simi
-        width: 100%;
-    }
-
- 
-    .footer-brand #logo {
-        height: 80px;
-        width: 80px;
-        position: relative;
-        left:110px;
-    }
-    .footer-brand h2 {
-        display: inline-block;
-        color: #ffffff;
-        font-size: 24px;
-        position: absolute;
-        left:370px;
-        top: 73px;
-    }
-    .footer-brand p {
-        color: #a0ac9f;
-        font-size: 16px;
-        line-height: 1.5;
-        position: absolute;
-        left:350px;
-        top: 120px;
-    }
-
-    .footer-nav {
-        display: flex;
-        flex-direction: column; 
-        gap: 10px;
-        position: absolute;
-        left: 1000px;
-        top: 80px;
-    }
-    .menu-title {
-        color: #ffffff;
-        font-weight: bold;
-        margin-bottom: 10px;
-        font-size: 18px;
-    }
-    .footer-nav a {
-        color: #a0ac9f;
-        text-decoration: none;
-        font-size: 16px;
-        transition: color 0.3s;
-    }
-    .footer-nav a:hover {
-        color: #ffffff;
-    }
-
-    #bottom {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        text-align: center;
-        color: #a0ac9f;
-        padding: 20px 0;
-        border-top: 1px solid #2c412a;
-        font-size: 14px;
-    }
-</style>  -->
-
-
+---
+import Layout from "../layouts/Layout.astro"
+---
+<Layout>
 <div class="main">
-    <div class="top">
-    <div class="text">
-        <div id="img"></div>
-        <h2>ECO CLUB</h2>
-        <p id="info">Integrating nature's wisdom with human innovation.<br/>Join us in building a sustainable future.</p>
-    </div>
-    <span class="links">
-        <span id="menu">Menu</span>
-        <a href="#" id="Home">Home</a>
-        <a href="#" id="Project">Project</a>
-        <a href="#" id="Team">Team</a>
-        <a href="#" id="Events">Events</a>
-    </span>
-    <span class="contact">
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-    </span>
-    </div>
-    <div class="copy">
-
-    </div>
+<div class="footer">
+      <a class="info">
+        <img src="/EcoVex_Sjec/logo1.jpeg" alt="EcoVex Logo" class="footer-logo" style="width: 60px; margin-right: 10px;"/>
+        <h2 style="margin-top: 10px; ">EcoVex SJEC</h2>
+      </a>
+      <div class="footer-con">
+        <h4 class="footer-con-title">Contact Us</h4>
+        <ul>
+          <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=ecoclub@sjec.ac.in&subject=Eco%20Club%20Inquiry&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20the%20club." target="_blank"  class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"  fill="currentColor" width="25" height="25"><path d="M125.4 128C91.5 128 64 155.5 64 189.4C64 190.3 64 191.1 64.1 192L64 192L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 192L575.9 192C575.9 191.1 576 190.3 576 189.4C576 155.5 548.5 128 514.6 128L125.4 128zM528 256.3L528 448C528 456.8 520.8 464 512 464L128 464C119.2 464 112 456.8 112 448L112 256.3L266.8 373.7C298.2 397.6 341.7 397.6 373.2 373.7L528 256.3zM112 189.4C112 182 118 176 125.4 176L514.6 176C522 176 528 182 528 189.4C528 193.6 526 197.6 522.7 200.1L344.2 335.5C329.9 346.3 310.1 346.3 295.8 335.5L117.3 200.1C114 197.6 112 193.6 112 189.4z"/></svg></a></li>
+          <li><a href="#" aria-label="GitHub" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a></li>
+          <li><a href="#" aria-label="LinkedIn" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+          <li><a href="#" aria-label="Instagram" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+        </ul>
+      </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; {new Date().getFullYear()} EcoVex SJEC.</p>
+  </div>
 </div>
-
-
+</div>
+</Layout>
 <style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+  .main {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .footer {
+    background-color: #0f1410;
+    color: #a0ac9f;
+    padding: 60px 60px 30px;
+    border-top: 1px solid #ffffff10;
+  }
+
+  .info{
+    position: relative;
+    top: 20px;
+    display:flex;
+    align-items: flex-start;
+  }
+  .footer-con-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #e8ede6;
+    margin-bottom: 10px;
+    position: relative;
+    left:-50px;
+  }
+.footer-con{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  top:-30px;
+}
+  .footer-con ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .footer-con a {
+    color: #a0ac9f;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+    margin: 10px;
+  }
+
+  .footer-con a:hover {
+    color: #34e9bd;
+  }
+
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    border-top: 1px solid #ffffff10;
+  }
+
+  .social-icon {
+    color: #a0ac9f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  .social-icon:hover {
+    color: #34e9bd;
+    transform: translateY(-2px);
+  }
+
+  .footer-copy {
+    font-size: 15px;
+    color: #5a6459;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 600px) {
+    .footer{
+      padding: 40px 20px;
     }
-    .main{
-        min-width: 125vw;
-        width: auto;
-        min-height: 40vh;
-        height: auto;
-        background-color: #0a0f0a;
-        padding: 70px 150px 30px 150px;
+    .info {
+      position: static;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 60px;
     }
-    .top{
-        /* display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
-        gap:20px; */
+    .footer-con{
+      align-items: center;
+      margin-bottom: 10px;
     }
-    h2{
-        color: #ffffff;
-        font-size: 24px;
-        position: relative;
-        left:13%;
-    }
-    #info{
-        color: #a0ac9f;
-        font-size: 16px;
-        line-height: 1.5;
-        padding-top: 15px;
-    }
-    .text{
-        position: relative;
-        top:-30px;
-    }
-    .links{
-        display: flex;
-        flex-direction: column;
-        padding-left: 40px;
-    }
-    a{
-         color: #a0ac9f;
-        text-decoration: none;
-        font-size: 16px;
-        transition: color 0.3s;
-    }
-    a:hover {
-        color: #ffffff;
-    }
-    .links #menu{
-         color: #ffffff;
-        font-weight: bold;
-        font-size: 18px;
-    }
-    #img{
-        background-image: url(/public/);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 40px;
-        width: 40px;
-    }
-    .contacts{
-        padding-left: 30px;
-    }
-    .copy{
-        /* margin-top: 50px;
-        border-top:1px solid white;
-        width: 75%; */
-    }
+  }
 </style>
