@@ -1,5 +1,7 @@
 # EcoSjec
 
+![EcoSjec Logo](./public/logo.png)
+
 Welcome to the EcoSjec website! This is an Astro-powered site for Eco SJEC, an environmental initiative focused on sustainability and eco-friendly projects at SJEC (St Joseph Engineering College).
 
 ## About
