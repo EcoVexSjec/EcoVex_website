@@ -1,0 +1,293 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="main">
+    <div class="event">
+      <div class="img"></div>
+      <h1 class="eventname">World <span class="gradient">Water</span> Day</h1>
+      <p class="info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        repudiandae incidunt odit asperiores voluptatem alias, laudantium
+        doloremque reprehenderit debitis dignissimos praesentium soluta. Cum
+        praesentium ratione, necessitatibus repellat unde sed corrupti placeat
+        dolor!
+      </p>
+      <h3 class="q">About <span class="gradient">This Event</span></h3>
+      <p class="s">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt veniam
+        possimus natus et a ipsa temporibus repellendus iure, sint eveniet
+        tenetur nihil ea aliquam beatae assumenda nisi illum earum laboriosam
+        esse quaerat.
+      </p>
+      <h2 class="contibutors">Timeline</h2>
+      <div class="border"></div>
+      <div class="contributor">
+        <div class="contri">
+          <h2 class="name">When</h2>
+          <p class="timeplace">
+            Monday, January 12, 2026<br />3:00 PM – 3:30 PM (GMT+5:30)
+          </p>
+        </div>
+        <div class="contri">
+          <h2 class="name">Where</h2>
+          <p class="timeplace">
+            Kalam Auditorium, St Joseph Engineering College<br />Vamanjoor<br
+            />Mangaluru 575028
+          </p>
+        </div>
+        <div class="border"></div>
+        <div class="spacer"></div>
+        <div class="collab">
+          <h2 class="partner">Partner</h2>
+          <div class="part">
+            <div class="partnerlogo"></div>
+          </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div class="peopleinfo">
+          <h2 class="organiser">Organiser</h2>
+          <div class="people">
+            <div class="card">
+              <div class="photo"></div>
+              <h2 class="peoplename">ROY</h2>
+              <p class="position">Technical Head</p>
+            </div>
+            <div class="card">
+              <div class="photo"></div>
+              <h2 class="peoplename">ROY</h2>
+              <p class="position">Technical Head</p>
+            </div>
+            <div class="card">
+              <div class="photo"></div>
+              <h2 class="peoplename">ROY</h2>
+              <p class="position">Technical Head</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .main {
+      background-color: #0a0f0a;
+      min-height: 260vh;
+      height: auto;
+    }
+    .event {
+      padding: 100px 400px 50px 400px;
+    }
+    .eventname {
+      font-size: 48px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .info {
+      font-size: 18px;
+      color: #a0ac9f;
+      margin-bottom: 70px;
+    }
+    .spacer {
+      width: 100%;
+      margin-bottom: 60px;
+    }
+    .img {
+      width: 100%;
+      height: 300px;
+      background-color: #0a0f0a;
+      margin-bottom: 50px;
+      background-image: url("/spider.jpg");
+      /* background-size: contain; */
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 40px;
+    }
+    .q {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .s {
+      font-size: 18px;
+      color: #a0ac9f;
+      margin-bottom: 70px;
+    }
+    .contibutors {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .border {
+      width: 100%;
+      border: 1px solid rgba(0, 150, 136, 0.2);
+      margin-bottom: 30px;
+    }
+    .gradient {
+      background: linear-gradient(135deg, #8bc34a, #009688);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .contri {
+      border: 1px solid rgba(0, 150, 136, 0.2);
+      background-color: #0096880d;
+      border-radius: 20px;
+      padding: 20px 90px 20px 40px;
+      width: fit-content;
+      margin-bottom: 30px;
+    }
+    .name {
+      text-align: start;
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .timeplace {
+      font-size: 14px;
+      color: #fff;
+      margin-left: 20px;
+    }
+    .collab {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 500px;
+    }
+    .partner {
+      font-size: 56px;
+      color: #fff;
+      margin-bottom: 60px;
+      margin-top: 200px;
+    }
+    .part {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .partnerlogo {
+      width: 400px;
+      height: 300px;
+      background-color: #0a0f0a;
+      background-image: url("/ECOVEX.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .peopleinfo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .organiser {
+      font-size: 56px;
+      color: #fff;
+      margin-bottom: 60px;
+      margin-top: 200px;
+    }
+
+    /* .people is now the grid CONTAINER */
+    .people {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 40px;
+      width: 100%;
+      max-width: 900px;
+      justify-items: center;
+    }
+
+    /* .card is each individual person */
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .photo {
+      height: 170px;
+      width: 170px;
+      border-radius: 50%;
+      border: 4px solid #34e9bd;
+      background-image: url("/logo.png");
+      background-size: 150px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .peoplename {
+      font-size: 24px;
+      color: #fff;
+      margin: 0;
+    }
+
+    .position {
+      font-size: 14px;
+      color: #a0ac9f;
+      margin: 0;
+    }
+    @media (max-width: 1500px) {
+      .event {
+        padding: 100px 20px 50px 20px;
+      }
+      .eventname {
+        font-size: 32px;
+      }
+      .info {
+        font-size: 16px;
+      }
+      .q {
+        font-size: 20px;
+      }
+      .s {
+        font-size: 16px;
+      }
+      .contibutor {
+        font-size: 20px;
+      }
+      .name {
+        font-size: 16px;
+      }
+      .timeplace {
+        font-size: 14px;
+      }
+      .partner {
+        font-size: 32px;
+      }
+      .partnerlogo {
+        width: 200px;
+        height: 150px;
+      }
+      .organiser {
+        font-size: 32px;
+      }
+      .photo {
+        width: 150px;
+        height: 150px;
+      }
+      .peoplename {
+        font-size: 20px;
+        color: #fff;
+      }
+      .position {
+        font-size: 14px;
+        color: #a0ac9f;
+      }
+    }
+  </style></Layout
+>

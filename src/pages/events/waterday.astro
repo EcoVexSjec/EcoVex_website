@@ -1,0 +1,13 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import Worldwater from '../../components/events/Worldwater.astro';
+---
+
+
+<Layout>
+    <Nav/>
+    <Worldwater client:visible/>
+    <Footer client:visible/>
+</Layout>
