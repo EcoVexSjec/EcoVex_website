@@ -1,11 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Nav from '../components/Nav.astro';
-import Events from '../components/Events.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Events from "../components/Events.astro";
+import Footer from "../components/Footer.astro";
 ---
+
 <Layout>
-    <Nav/>
-    <Events client:load/>
-    <Footer client:visible/>
+  <Nav />
+  <Events client:load />
+  <Footer client:visible />
 </Layout>

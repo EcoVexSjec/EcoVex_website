@@ -3,136 +3,157 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout>
-    <div class="main">
-        <div class="project">
-            <h1 class="projectname">Tree <span class="gradient">Tagging</span></h1>
-            <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium repudiandae incidunt odit asperiores voluptatem alias, laudantium doloremque reprehenderit debitis dignissimos praesentium soluta. Cum praesentium ratione, necessitatibus repellat unde sed corrupti placeat dolor!</p>
-            <div class="img"></div>
-            <h3 class="q">The <span class="gradient">Problem</span></h3>
-            <p class="s">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt veniam possimus natus et a ipsa temporibus repellendus iure, sint eveniet tenetur nihil ea aliquam beatae assumenda nisi illum earum laboriosam esse quaerat.</p>
-            <h3 class="q">The <span class="gradient">Solution</span></h3>
-            <p class="s">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt veniam possimus natus et a ipsa temporibus repellendus iure, sint eveniet tenetur nihil ea aliquam beatae assumenda nisi illum earum laboriosam esse quaerat.</p>
-            <h3 class="q">Target <span class="gradient">Audience</span></h3>
-            <p class="s">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt veniam possimus natus et a ipsa temporibus repellendus iure, sint eveniet tenetur nihil ea aliquam beatae assumenda nisi illum earum laboriosam esse quaerat.</p>
-            <h2 class="contibutors">Contributor</h2>
-            <div class="border"></div>
-            <div class="contributor">
-                <div class="contri">
-                    <h2 class="name">EcoVex Club</h2>
-                    <p class="title">Member.Multiple</p>
-                </div>
-                <div class="contri">
-                    <h2 class="name">EcoVex Club</h2>
-                    <p class="title">Member.Multiple</p>
-                </div>
-            </div>
+  <div class="main">
+    <div class="project">
+      <h1 class="projectname">Tree <span class="gradient">Tagging</span></h1>
+      <p class="info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        repudiandae incidunt odit asperiores voluptatem alias, laudantium
+        doloremque reprehenderit debitis dignissimos praesentium soluta. Cum
+        praesentium ratione, necessitatibus repellat unde sed corrupti placeat
+        dolor!
+      </p>
+      <div class="img"></div>
+      <h3 class="q">The <span class="gradient">Problem</span></h3>
+      <p class="s">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt veniam
+        possimus natus et a ipsa temporibus repellendus iure, sint eveniet
+        tenetur nihil ea aliquam beatae assumenda nisi illum earum laboriosam
+        esse quaerat.
+      </p>
+      <h3 class="q">The <span class="gradient">Solution</span></h3>
+      <p class="s">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt veniam
+        possimus natus et a ipsa temporibus repellendus iure, sint eveniet
+        tenetur nihil ea aliquam beatae assumenda nisi illum earum laboriosam
+        esse quaerat.
+      </p>
+      <h3 class="q">Target <span class="gradient">Audience</span></h3>
+      <p class="s">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt veniam
+        possimus natus et a ipsa temporibus repellendus iure, sint eveniet
+        tenetur nihil ea aliquam beatae assumenda nisi illum earum laboriosam
+        esse quaerat.
+      </p>
+      <h2 class="contibutors">Contributor</h2>
+      <div class="border"></div>
+      <div class="contributor">
+        <div class="contri">
+          <h2 class="name">EcoVex Club</h2>
+          <p class="title">Member.Multiple</p>
         </div>
-    </div>  
+        <div class="contri">
+          <h2 class="name">EcoVex Club</h2>
+          <p class="title">Member.Multiple</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
 
 <style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .main {
+    background-color: #0a0f0a;
+    min-height: 100vh;
+    height: auto;
+  }
+  .project {
+    padding: 120px 400px 50px 400px;
+  }
+  .projectname {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .info {
+    font-size: 18px;
+    color: #a0ac9f;
+    margin-bottom: 50px;
+  }
+  .img {
+    width: 100%;
+    height: 500px;
+    background-color: #0a0f0a;
+    margin-bottom: 50px;
+    background-image: url("/spider.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .q {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .s {
+    font-size: 18px;
+    color: #a0ac9f;
+    margin-bottom: 50px;
+  }
+  .contibutors {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .border {
+    width: 100%;
+    border: 1px solid rgba(0, 150, 136, 0.2);
+    margin-bottom: 30px;
+  }
+  .gradient {
+    background: linear-gradient(135deg, #8bc34a, #009688);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .contri {
+    border: 1px solid rgba(0, 150, 136, 0.2);
+    background-color: #0096880d;
+    border-radius: 20px;
+    padding: 20px 90px 20px 40px;
+    width: fit-content;
+    margin-bottom: 30px;
+  }
+  .name {
+    text-align: start;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-size: 14px;
+    color: #fff;
+    margin-left: 20px;
+  }
+  @media (max-width: 1500px) {
+    .project {
+      padding: 100px 20px 50px 20px;
     }
-    .main{
-        background-color:#0a0f0a;
-        min-height: 100vh;
-        height: auto;
+    .projectname {
+      font-size: 32px;
     }
-    .project{
-        padding: 120px 400px 50px  400px;
+    .info {
+      font-size: 16px;
     }
-    .projectname{
-        font-size: 48px;
-        color: #fff;
-        margin-bottom: 20px;
+    .q {
+      font-size: 20px;
     }
-    .info{
-        font-size: 18px;
-        color: #a0ac9f;
-        margin-bottom: 50px;
+    .s {
+      font-size: 16px;
     }
-    .img{
-        width: 100%;
-        height: 500px;
-        background-color: #0a0f0a;
-        margin-bottom: 50px;
-        background-image: url("/spider.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+    .contibutor {
+      font-size: 20px;
     }
-    .q{
-        font-size: 28px;
-        color: #fff;
-        margin-bottom: 20px;
+    .name {
+      font-size: 16px;
     }
-    .s{
-        font-size: 18px;
-        color: #a0ac9f;
-        margin-bottom: 50px;
+    .title {
+      font-size: 14px;
     }
-    .contibutors{
-        font-size: 28px;
-        color: #fff;
-        margin-bottom: 20px;
-    }
-    .border{
-        width: 100%;
-        border: 1px solid rgba(0, 150, 136, 0.2);
-        margin-bottom: 30px;
-    }
-     .gradient{
-        background: linear-gradient(135deg, #8bc34a, #009688);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    } 
-    .contri{
-        border: 1px solid rgba(0, 150, 136, 0.2);
-        background-color: #0096880D;
-        border-radius: 20px;
-        padding: 20px 90px 20px 40px;
-        width: fit-content;
-        margin-bottom: 30px;
-    }
-    .name{
-        text-align: start;
-        font-size: 18px;
-        color: #fff;
-        margin-bottom: 10px;
-    }
-    .title{
-        font-size: 14px;
-        color: #fff;
-        margin-left: 20px;
-    }
-    @media (max-width: 1500px) {
-        .project {
-            padding: 100px 20px 50px 20px;
-        }
-        .projectname {
-            font-size: 32px;
-        }
-        .info { 
-            font-size: 16px;
-        }
-        .q {
-            font-size: 20px;
-        }
-        .s {
-            font-size: 16px;
-        }
-        .contibutor {
-            font-size: 20px;
-        }
-        .name {
-            font-size: 16px;
-        }
-        .title {
-            font-size: 14px;
-        }
-    }
+  }
 </style>

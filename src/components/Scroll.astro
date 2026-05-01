@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
@@ -7,7 +7,9 @@ import Layout from "../layouts/Layout.astro"
     <div class="hero-sticky">
       <p class="hero-text">
         <span class="hero-dim">Bridging Nature with technology</span>
-        <span class="hero-fill" id="heroFill">Bridging Nature with technology</span>
+        <span class="hero-fill" id="heroFill"
+          >Bridging Nature with technology</span
+        >
       </p>
     </div>
   </section>
@@ -25,9 +27,9 @@ import Layout from "../layouts/Layout.astro"
       scrub: true,
       onUpdate: (self) => {
         gsap.set("#heroFill", {
-          clipPath: `inset(0 ${((1 - self.progress) * 100).toFixed(3)}% 0 0)`
+          clipPath: `inset(0 ${((1 - self.progress) * 100).toFixed(3)}% 0 0)`,
         });
-      }
+      },
     });
   </script>
 </Layout>
@@ -60,12 +62,11 @@ import Layout from "../layouts/Layout.astro"
     display: block;
     white-space: nowrap;
   }
-@media (max-width:350px)
-{
-   .hero-text {
-    font-size: 20px;
-   }
-}
+  @media (max-width: 350px) {
+    .hero-text {
+      font-size: 20px;
+    }
+  }
   .hero-fill {
     position: absolute;
     inset: 0;

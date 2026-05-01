@@ -1,12 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 ---
+
 <Layout>
-<div id="main">
-  <div class="hero">  
-    <div class="img"></div>
-    <h1 class="heading gradient">EcoVex</h1>
-  </div>
+  <div id="main">
+    <div class="hero">
+      <div class="img"></div>
+      <h1 class="heading gradient">EcoVex</h1>
+    </div>
   </div>
 </Layout>
 
@@ -17,10 +18,10 @@ import Layout from "../layouts/Layout.astro"
     box-sizing: border-box;
   }
   #main {
-    background-color: #070d0b; 
-    background-image: 
-    linear-gradient(rgba(0, 150, 136, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 150, 136, 0.1) 1px, transparent 1px);
+    background-color: #070d0b;
+    background-image:
+      linear-gradient(rgba(0, 150, 136, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 150, 136, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
     min-height: 100vh;
     height: auto;
@@ -29,26 +30,26 @@ import Layout from "../layouts/Layout.astro"
     justify-content: center;
     flex-direction: column;
   }
-  .hero{
+  .hero {
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
-  .gradient{
+  .gradient {
     background: linear-gradient(135deg, #8bc34a, #009688);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .heading{
+  .heading {
     color: white;
     font-size: 96px;
-    font-family:"Anta", sans-serif;;
+    font-family: "Anta", sans-serif;
     margin-top: 70px;
   }
-  .img{
+  .img {
     height: 60vh;
     width: 60vw;
     background-image: url(/logo.png);
@@ -58,44 +59,39 @@ import Layout from "../layouts/Layout.astro"
     opacity: 0.7;
     margin-top: 50px;
   }
-  @media(max-width: 910px)
-  {
-    .img{
+  @media (max-width: 910px) {
+    .img {
       height: 60vh;
       width: 70vw;
     }
-    .heading{
-    margin-top: 50px;
+    .heading {
+      margin-top: 50px;
+    }
   }
-  }
-   @media(max-width: 650px)
-  {
-    .img{
+  @media (max-width: 650px) {
+    .img {
       height: 60vh;
       width: 90vw;
     }
-    .heading{
+    .heading {
       margin-top: 20px;
     }
   }
-  @media(max-width: 510px)
-  {
-    .img{
+  @media (max-width: 510px) {
+    .img {
       height: 60vh;
       width: 80vw;
     }
-    .heading    {
+    .heading {
       margin-top: 10px;
     }
   }
-  @media(max-width: 410px)
-  {
-    .img{
+  @media (max-width: 410px) {
+    .img {
       height: 50vh;
       width: 80vw;
     }
-    .heading
-    {
+    .heading {
       font-size: 88px;
       margin-top: 10px;
     }
