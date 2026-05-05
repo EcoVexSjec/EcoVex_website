@@ -1,0 +1,441 @@
+---
+---
+
+<section id="about">
+  <!-- Our Story Section -->
+  <div class="container section">
+    <div class="story-grid">
+      <div class="story-title">
+        <span class="number text-accent">01/</span>
+        <h2>Our Story</h2>
+      </div>
+      <div class="story-content">
+        <p>
+          Driven by the ingenuity of our members, the EcoVex Club at St. Joseph Engineering College is a testament to our commitment to learning and sustainability. Whether you are new to the green initiative or already eco-savvy, EcoVex is the club where you can turbocharge your skills and network with peers and experts.
+        </p>
+        <p>
+          We welcome students from all fields, guiding everyone from their first environmental project to advanced sustainable solutions and collaborative tech projects. Our vibrant club hosts activities, shares resources, and offers opportunities for learning in both technical and creative domains.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mission Section -->
+  <div class="mission-section section">
+    <div class="container">
+      <div class="mission-header">
+        <span class="number text-accent">02/</span>
+        <h2>Our Mission</h2>
+      </div>
+
+      <div class="mission-grid">
+        <!-- Step 1 -->
+        <div class="step-card group">
+          <div class="step-header">
+            <span class="step-badge">Step 01</span>
+            <div class="step-line"></div>
+          </div>
+          <h3>Technical Growth</h3>
+          <ul>
+            <li><div class="dot"></div>Web Development</li>
+            <li><div class="dot"></div>Android Development</li>
+            <li><div class="dot"></div>AIML</li>
+            <li><div class="dot"></div>Cloud Technologies</li>
+            <li><div class="dot"></div>Flutter</li>
+            <li><div class="dot"></div>UI/UX</li>
+          </ul>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card group">
+          <div class="step-header">
+            <span class="step-badge">Step 02</span>
+            <div class="step-line"></div>
+          </div>
+          <h3>Creative Skills</h3>
+          <ul>
+            <li><div class="dot"></div>Operations & Events</li>
+            <li><div class="dot"></div>Campaign Coordination</li>
+            <li><div class="dot"></div>Media & Content Creation</li>
+            <li><div class="dot"></div>Program Coordination</li>
+          </ul>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card group">
+          <div class="step-header">
+            <span class="step-badge">Step 03</span>
+            <div class="step-line"></div>
+          </div>
+          <h3>Global Opportunities</h3>
+          <ul>
+            <li><div class="dot"></div>Game Dev & UI/UX</li>
+            <li><div class="dot"></div>Global Resources</li>
+            <li><div class="dot"></div>Workshops</li>
+            <li><div class="dot"></div>Collaborative Community</li>
+            <li><div class="dot"></div>Cross-domain connection</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Impact Section -->
+  <div class="container section">
+    <div class="impact-header-row">
+      <div class="impact-title">
+        <span class="number text-accent">03/</span>
+        <h2>Our Impact</h2>
+      </div>
+      <p class="impact-desc">
+        We measure our success by the growth of our members and the strength of our community.
+      </p>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="counter" data-target="600">0+</div>
+        <div class="impact-label">Active Members</div>
+      </div>
+      <div class="impact-item">
+        <div class="counter" data-target="20">0+</div>
+        <div class="impact-label">Sessions</div>
+      </div>
+      <div class="impact-item">
+        <div class="counter" data-target="12">0+</div>
+        <div class="impact-label">Expert Speakers</div>
+      </div>
+      <div class="impact-item">
+        <div class="counter" data-target="10">0+</div>
+        <div class="impact-label">Workshops</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function animateCounter(el) {
+    const target = parseInt(el.getAttribute("data-target"));
+    const duration = 2000;
+    const start = 0;
+    let startTime = null;
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const current = Math.floor(progress * (target - start) + start);
+      el.textContent = current + "+";
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        el.textContent = target + "+";
+      }
+    }
+
+    window.requestAnimationFrame(step);
+  }
+
+  function initCounters() {
+    const observerOptions = {
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll(".counter").forEach((counter) => {
+      // Reset text in case of fast page navigation
+      counter.textContent = "0+";
+      observer.observe(counter);
+    });
+  }
+
+  initCounters();
+  document.addEventListener('astro:page-load', initCounters);
+</script>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  #about {
+    font-family: "Anta", "Google Sans", sans-serif;
+    background-color: #0a0f0a;
+    color: #e0f2f1;
+    overflow: hidden;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .section {
+    padding: 80px 0;
+  }
+  @media (min-width: 768px) {
+    .section {
+      padding: 120px 0;
+    }
+  }
+
+
+
+  #about {
+    padding-bottom: 60px;
+  }
+
+  .text-accent {
+    color: #34e9bd;
+  }
+  .number {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+    display: block;
+  }
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #e0f2f1;
+    margin-bottom: 24px;
+  }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 3.75rem;
+    }
+  }
+
+  /* Story Section */
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  @media (min-width: 1024px) {
+    .story-grid {
+      grid-template-columns: 5fr 7fr;
+      gap: 96px;
+    }
+  }
+  .story-content p {
+    font-size: 1.125rem;
+    color: #a0ac9f;
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+  @media (min-width: 768px) {
+    .story-content p {
+      font-size: 1.25rem;
+    }
+  }
+
+  /* Mission Section */
+  .mission-section {
+    background-color: #0d140d;
+  }
+  .mission-header {
+    margin-bottom: 80px;
+  }
+  .mission-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  @media (min-width: 768px) {
+    .mission-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .mission-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 64px;
+    }
+  }
+
+  .step-card {
+    transition: all 0.3s ease;
+  }
+  .step-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .step-badge {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #a0ac9f;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 8px;
+    border: 1px solid rgba(160, 172, 159, 0.3);
+    border-radius: 4px;
+  }
+  .step-line {
+    height: 1px;
+    flex-grow: 1;
+    background-color: rgba(160, 172, 159, 0.2);
+  }
+  .step-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e0f2f1;
+    margin-bottom: 24px;
+    transition: color 0.3s ease;
+  }
+  .step-card:hover h3 {
+    color: #34e9bd;
+  }
+  .step-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .step-card li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #a0ac9f;
+    font-size: 1rem;
+  }
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #34e9bd;
+  }
+
+  /* Impact Section */
+  .impact-header-row {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-bottom: 80px;
+    align-items: flex-start;
+  }
+  @media (min-width: 1024px) {
+    .impact-header-row {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .impact-desc {
+    max-width: 400px;
+    color: #a0ac9f;
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+  
+  .impact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  @media (min-width: 768px) {
+    .impact-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .impact-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 48px;
+    }
+  }
+
+  .impact-item {
+    border-left: 4px solid #34e9bd;
+    padding-left: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .counter {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #e0f2f1;
+    margin-bottom: 8px;
+  }
+  @media (min-width: 768px) {
+    .counter {
+      font-size: 3rem;
+    }
+  }
+  .impact-label {
+    color: #a0ac9f;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+  }
+
+  /* Mobile Centering Rules (Must be at the bottom to override global styles) */
+  @media (max-width: 767px) {
+    .container {
+      padding: 0 12vw;
+    }
+    .story-title, .mission-header, .impact-title {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .number {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    h2 {
+      text-align: center;
+    }
+    .story-content p {
+      text-align: center;
+    }
+    .impact-header-row {
+      align-items: center;
+      text-align: center;
+    }
+    .impact-desc {
+      text-align: center;
+      margin: 0 auto;
+    }
+    .step-header {
+      justify-content: center;
+    }
+    .step-line {
+      display: none;
+    }
+    .step-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .step-card ul {
+      align-items: center;
+    }
+    .step-card li {
+      justify-content: center;
+    }
+    .impact-item {
+      text-align: center;
+      border-left: none;
+      border-bottom: 2px solid #34e9bd;
+      padding-left: 0;
+      padding-bottom: 32px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>

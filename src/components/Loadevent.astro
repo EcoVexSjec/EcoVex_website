@@ -52,6 +52,18 @@ import Layout from "../layouts/Layout.astro";
           <span class="progress">complete</span>
         </div>
       </a>
+      <a href="/EcoVex_website/events/waterday" class="link">
+        <div class="container">
+          <div class="img"></div>
+          <h3 class="time">15-06-2023</h3>
+          <h3 class="title">Eco Hackathon</h3>
+          <p class="content">
+            Join us for a 24-hour hackathon focused on building sustainable software solutions to combat climate change and reduce carbon footprints.
+          </p>
+          <span class="type">hackathon</span>
+          <span class="incomplete">upcoming</span>
+        </div>
+      </a>
     </div>
     <div class="loading">
       <a href="/EcoVex_website/event" class="load">View Event Highlights</a>
@@ -68,25 +80,28 @@ import Layout from "../layouts/Layout.astro";
   #main {
     min-height: 100vh;
     height: auto;
-    background-color: #0a0f0a;
+    background-color: #0f1410;
+    padding-bottom: 40px;
   }
   .container {
     background-color: #0096880d;
     border: 1px solid rgba(0, 150, 136, 0.2);
     text-align: center;
     border-radius: 20px;
-    margin: 20px;
+    margin: 10px;
     padding: 40px;
     justify-items: start;
     transition: translate ease;
+    height: 100%;
   }
   #project {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     justify-content: center;
-    margin-left: 150px;
-    margin-right: 150px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px 40px 40px 40px;
   }
   .img {
     background-color: #ffffff1a;
@@ -114,20 +129,19 @@ import Layout from "../layouts/Layout.astro";
     color: #e0f2f1;
     font-size: 24px;
     margin-bottom: 20px;
-    padding-left: 30px;
   }
   .content {
     color: #a0ac9f;
     font-size: 16px;
-    margin-bottom: 90px;
+    margin-bottom: 40px;
   }
   .container:hover {
     translate: 0 -10px;
     box-shadow: rgba(52, 211, 153, 0.3) 0px 10px 30px -10px;
-    .img {
-      translate: 0 -10px;
-      box-shadow: rgba(52, 211, 153, 0.3) 0px 10px 30px -10px;
-    }
+  }
+  .container:hover .img {
+    translate: 0 -10px;
+    box-shadow: rgba(52, 211, 153, 0.3) 0px 10px 30px -10px;
   }
   .type {
     border: 1px solid #a0ac9f;
@@ -135,17 +149,19 @@ import Layout from "../layouts/Layout.astro";
     color: #a0ac9f;
     border-radius: 15px;
     font-size: 12px;
-    padding: 6px 20px;
-    margin-right: 15px;
+    padding: 6px 12px;
+    margin-right: 8px;
+    display: inline-block;
+    margin-bottom: 10px;
   }
-
   .progress {
     border: 1px solid #ffffff1a;
     background-color: #10fb981a;
-    padding: 6px 20px;
+    padding: 6px 12px;
     color: #e0f2f1;
     border-radius: 15px;
     font-size: 12px;
+    display: inline-block;
   }
   .incomplete {
     border: 1px solid #ffffff1a;
@@ -153,13 +169,16 @@ import Layout from "../layouts/Layout.astro";
     color: #e0f2f1;
     border-radius: 15px;
     font-size: 12px;
-    padding: 6px 20px;
+    padding: 6px 12px;
+    display: inline-block;
   }
   #head {
     font-size: 48px;
     color: #e0f2f1;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .gradient {
     background: linear-gradient(135deg, #4a7c44 0%, #34e9bd 100%);
@@ -172,7 +191,7 @@ import Layout from "../layouts/Layout.astro";
     font-size: 18px;
     text-align: center;
     margin-top: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -180,114 +199,54 @@ import Layout from "../layouts/Layout.astro";
     text-decoration: none;
     color: #e0f2f1;
     background-color: #ffffff0d;
-    padding: 20px 40px 20px 40px;
+    padding: 16px 32px;
     border-radius: 50px;
     border: 1.2px solid #34e9bd;
     font-weight: bold;
     font-size: 16px;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
   }
   .load:hover {
     background-color: #ffffff1a;
+    transform: scale(1.05);
   }
   .link {
     text-decoration: none;
+    display: flex;
   }
   .loading {
-    padding: 60px 20px 60px 20px;
-    margin-top: 40px;
-    margin-left: 42%;
-    margin-right: 30%;
-  }
-  @media (max-width: 1200px) {
-    .loading {
-      margin-left: 36%;
-      margin-right: 20%;
-    }
-  }
-  @media (max-width: 850px) {
-    .loading {
-      margin-left: 260px;
-      margin-right: 0;
-    }
-  }
-  @media (max-width: 800px) {
-    .loading {
-      margin-left: 200px;
-      margin-right: 0;
-    }
-  }
-  @media (max-width: 650px) {
-    .loading {
-      margin-left: 160px;
-      margin-right: 0;
-    }
+    padding: 60px 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  @media (max-width: 550px) {
-    .loading {
-      margin-left: 140px;
-      margin-right: 0;
-    }
-  }
-  @media (max-width: 541px) {
-    .loading {
-      margin-left: 120px;
-      margin-right: 0;
-    }
-  }
-  @media (max-width: 515px) {
-    .loading {
-      margin-left: 120px;
-      margin-right: 0;
-    }
-  }
-  @media (max-width: 795px) {
-    .loading {
-      margin-left: 270px;
-      margin-right: 0;
-    }
-  }
-  @media (max-width: 777px) {
-    .loading {
-      margin-left: 250px;
-      margin-right: 0;
-    }
-  }
-  @media (max-width: 715px) {
-    .loading {
-      margin-left: 200px;
-      margin-right: 0;
-    }
-  }
-  @media (max-width: 642px) {
-    .loading {
-      margin-left: 180px;
-      margin-right: 0;
-    }
-  }
-  @media (max-width: 598px) {
-    .loading {
-      margin-left: 160px;
-      margin-right: 0;
-    }
-  }
+  /* Mobile horizontal scroll / marquee */
   @media (max-width: 500px) {
-    .loading {
-      margin-left: 60px;
-      margin-right: 0;
+    #project {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      justify-content: flex-start;
+      padding: 20px 20px 40px 20px;
+      gap: 20px;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
     }
-  }
-  @media (max-width: 400px) {
-    .loading {
-      margin-left: 50px;
-      margin-right: 0;
+    
+    #project::-webkit-scrollbar {
+      display: none; /* Chrome, Safari and Opera */
     }
-  }
-  @media (max-width: 350px) {
-    .loading {
-      margin-left: 20px;
-      margin-right: 0;
+
+    .link {
+      flex: 0 0 85%;
+      scroll-snap-align: center;
+    }
+    
+    .container {
+      width: 100%;
     }
   }
 </style>

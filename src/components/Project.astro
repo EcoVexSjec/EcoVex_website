@@ -115,9 +115,170 @@ import Layout from "../layouts/Layout.astro";
           </div>
         </div>
       </a>
+      <a href="/EcoVex_website/store/Projecttree">
+        <div class="container">
+          <div id="img"></div>
+          <h3>(; Project Clover</h3>
+          <p class="para1">
+            Project Clover is our flagship initiative, focused on developing a
+            cutting-edge electric vehicle that combines sustainability with high
+            performance.
+          </p>
+          <div id="contributors">
+            <h4>Contributors:</h4>
+            <p class="name">Roy, Melroy</p>
+            <span class="tech-stack">React js</span>
+            <span class="tech-stack">Node js</span>
+            <span class="tech-stack">MongoDB</span>
+          </div>
+        </div>
+      </a>
+      <a href="/EcoVex_Sjec/store/Projecttree">
+        <div class="container">
+          <div id="img"></div>
+          <h3>(; Project Clover</h3>
+          <p class="para1">
+            Project Clover is our flagship initiative, focused on developing a
+            cutting-edge electric vehicle that combines sustainability with high
+            performance.
+          </p>
+          <div id="contributors">
+            <h4>Contributors:</h4>
+            <p class="name">Roy, Melroy</p>
+            <span class="tech-stack">React js</span>
+            <span class="tech-stack">Node js</span>
+            <span class="tech-stack">MongoDB</span>
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="container">
+          <div id="img"></div>
+          <h3>(; Project Clover</h3>
+          <p class="para1">
+            Project Clover is our flagship initiative, focused on developing a
+            cutting-edge electric vehicle that combines sustainability with high
+            performance.
+          </p>
+          <div id="contributors">
+            <h4>Contributors:</h4>
+            <p class="name">Roy, Melroy</p>
+            <span class="tech-stack">React js</span>
+            <span class="tech-stack">Node js</span>
+            <span class="tech-stack">MongoDB</span>
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="container">
+          <div id="img"></div>
+          <h3>(; Project Clover</h3>
+          <p class="para1">
+            Project Clover is our flagship initiative, focused on developing a
+            cutting-edge electric vehicle that combines sustainability with high
+            performance.
+          </p>
+          <div id="contributors">
+            <h4>Contributors:</h4>
+            <p class="name">Roy, Melroy</p>
+            <span class="tech-stack">React js</span>
+            <span class="tech-stack">Node js</span>
+            <span class="tech-stack">MongoDB</span>
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="container">
+          <div id="img"></div>
+          <h3>(; Project Clover</h3>
+          <p class="para1">
+            Project Clover is our flagship initiative, focused on developing a
+            cutting-edge electric vehicle that combines sustainability with high
+            performance.
+          </p>
+          <div id="contributors">
+            <h4>Contributors:</h4>
+            <p class="name">Roy, Melroy</p>
+            <span class="tech-stack">React js</span>
+            <span class="tech-stack">Node js</span>
+            <span class="tech-stack">MongoDB</span>
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="container">
+          <div id="img"></div>
+          <h3>(; Project Clover</h3>
+          <p class="para1">
+            Project Clover is our flagship initiative, focused on developing a
+            cutting-edge electric vehicle that combines sustainability with high
+            performance.
+          </p>
+          <div id="contributors">
+            <h4>Contributors:</h4>
+            <p class="name">Roy, Melroy</p>
+            <span class="tech-stack">React js</span>
+            <span class="tech-stack">Node js</span>
+            <span class="tech-stack">MongoDB</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div id="load-more-container" class="loading-container" style="display: none;">
+      <button id="load-more-btn" class="load-btn">Load More</button>
     </div>
   </div>
 </Layout>
+
+<script>
+  function initLoadMore() {
+    const projectContainer = document.getElementById('project');
+    if (!projectContainer) return;
+    
+    const cards = Array.from(projectContainer.children);
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const loadMoreContainer = document.getElementById('load-more-container');
+    
+    let visibleCount = 9;
+
+    function updateVisibility() {
+      cards.forEach((card, index) => {
+        if (index >= visibleCount) {
+          card.style.display = 'none';
+        } else {
+          card.style.display = '';
+        }
+      });
+      
+      if (cards.length > visibleCount) {
+        if (loadMoreContainer) loadMoreContainer.style.display = 'flex';
+      } else {
+        if (loadMoreContainer) loadMoreContainer.style.display = 'none';
+      }
+    }
+
+    if (cards.length > 0) {
+      updateVisibility();
+    }
+
+    if (loadMoreBtn) {
+      // remove old event listeners
+      const newBtn = loadMoreBtn.cloneNode(true);
+      if (loadMoreBtn.parentNode) {
+        loadMoreBtn.parentNode.replaceChild(newBtn, loadMoreBtn);
+      }
+      
+      newBtn.addEventListener('click', () => {
+        visibleCount += 9;
+        updateVisibility();
+      });
+    }
+  }
+
+  initLoadMore();
+  document.addEventListener('astro:page-load', initLoadMore);
+</script>
+
 
 <style>
   * {
@@ -142,12 +303,17 @@ import Layout from "../layouts/Layout.astro";
   }
   #project {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+    gap: 30px;
     justify-content: center;
-    margin-left: 130px;
-    margin-right: 130px;
-    padding-bottom: 150px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  @media (min-width: 768px) {
+    #project {
+      padding: 0 40px;
+    }
   }
   #img {
     background-color: #ffffff1a;
@@ -242,5 +408,31 @@ import Layout from "../layouts/Layout.astro";
   }
   a {
     text-decoration: none;
+  }
+
+  .loading-container {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .load-btn {
+    text-decoration: none;
+    color: #e0f2f1;
+    background-color: transparent;
+    padding: 16px 40px;
+    border-radius: 50px;
+    border: 1.5px solid #34e9bd;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(52, 233, 189, 0.1);
+  }
+  .load-btn:hover {
+    background-color: rgba(52, 233, 189, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 233, 189, 0.2);
   }
 </style>
