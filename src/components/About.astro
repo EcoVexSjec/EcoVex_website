@@ -382,7 +382,7 @@
   /* Mobile Centering Rules (Must be at the bottom to override global styles) */
   @media (max-width: 767px) {
     .container {
-      padding: 0 12vw;
+      padding: 0 8vw;
     }
     .story-title, .mission-header, .impact-title {
       text-align: center;
@@ -398,33 +398,30 @@
       text-align: center;
     }
     .story-content p {
-      text-align: center;
+      text-align: left;
     }
     .impact-header-row {
       align-items: center;
       text-align: center;
     }
     .impact-desc {
-      text-align: center;
-      margin: 0 auto;
+      text-align: left;
+      margin: 0;
     }
     .step-header {
-      justify-content: center;
-    }
-    .step-line {
-      display: none;
+      justify-content: flex-start;
     }
     .step-card {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
+      align-items: flex-start;
+      text-align: left;
     }
     .step-card ul {
-      align-items: center;
+      align-items: flex-start;
     }
     .step-card li {
-      justify-content: center;
+      justify-content: flex-start;
     }
     .impact-item {
       text-align: center;
